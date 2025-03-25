@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tangerine:wght@400;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos&family=Zen+Dots&display=swap');
+
+
+/* ✅ Globální proměnné */
+// :root {
+//   --background: #ffffff;
+//   --background-box: #007BFF;
+//   --fontcolor: #007BFF;
+//   --foreground: #171717;
+//   --primary-color: #F4A261;
+//   --secondary-color: #3d3a3a;
+//   --font-primary: "Tangerine", cursive;
+//   --font-secondary: "Tinos", serif;
+//   --font-logo: "Zen Dots", sans-serif;
+// }
+
+.onasBox{
+    margin-top: 80px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+z-index: 1010;
+
+}
+.Onas{
+font-family: var(--font-secondary);
+font-size: 2.5rem;
+font-style: oblique;
+font-weight: 500;
+
+}
+.myFoto{
+    position: absolute;
+    margin-right: 580px;
+    margin-bottom: 250px;
+    border-radius: 15px;
+   
+    
+}
+.oNasP{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, #14add3, #586364);
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(116, 115, 114, 0.5),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+                0 6px 12px rgba(0, 0, 0, 0.815);
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    margin: auto; /* Zarovná box na střed */
+    padding: 20px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    transition: transform 0.3s ease;
+    color: var(--secondary-color);
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+.oNasP:hover{
+    transform: translateY(
+        -5px
+    );
+}

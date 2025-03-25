@@ -1,0 +1,61 @@
+.navbar {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 1000;
+}
+
+/* Styl pro hamburger */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1100;
+
+    span {
+        width: 30px;
+        height: 3px;
+        background: black;
+        transition: 0.3s;
+    }
+}
+
+/* Postranní menu */
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 200px;
+    background: rgba(20, 20, 20, 0.527);
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu.open {
+    transform: translateX(0);
+}
+
+/* Styl pro jednotlivé položky */
+.menu li {
+    color: beige;
+    list-style: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Hover efekt */
+.menu li:hover {
+    color: blue;
+    text-decoration: underline;
+}
