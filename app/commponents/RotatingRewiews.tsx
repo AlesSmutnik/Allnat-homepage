@@ -58,7 +58,7 @@ const RotatingReviews: React.FC = () => {
   // Effect pro nastavení počtu zobrazených recenzí podle šířky okna
   useEffect(() => {
     const handleResize = () => {
-      setDisplayCount(window.innerWidth < 700 ? 2 : 3);
+      setDisplayCount(window.innerWidth < 700 ? 1 : 1);
     };
     
     // Nastavení počátečního počtu recenzí

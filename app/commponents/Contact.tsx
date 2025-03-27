@@ -56,7 +56,7 @@ const ContactForm = () => {
            
          <form onSubmit={handleSubmit} className={style.ContactForm}>
          <div className={style.ContactYorNameAll}>
-         <p className={style.ContactYorName}>Vaše Jméno nebo Společnost </p>
+         <p className={style.ContactYorName}>Jméno</p>
          <input
           type="text" 
           value={name} 
@@ -68,7 +68,7 @@ const ContactForm = () => {
          </div>     
          <br />
          <div className={style.ContactEmailAll}>
-         <p className={style.ContactEmail}>Váš email</p>
+         <p className={style.ContactEmail}>Email</p>
          <input
           type="email" 
           value={email} 
@@ -80,7 +80,7 @@ const ContactForm = () => {
          </div> 
          <br />
          <div className={style.ContactMessageAll}>
-         <p className={style.ContactmessageDes}>Napište nám zprávu</p>
+         <p className={style.ContactmessageDes}>Napište nám</p>
          <textarea
           value={message} 
           onChange={(e) => setMessage(e.target.value)} 

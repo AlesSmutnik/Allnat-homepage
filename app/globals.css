@@ -8,7 +8,7 @@
 
 /* ✅ Globální proměnné */
 :root {
-  --background: #ffffff;
+  --background: #9c9a9a93;
   --background-box: #007BFF;
   --fontcolor: #0559b3;
   --foreground: #171717;
@@ -26,16 +26,11 @@
     --foreground: #F9FAFC;
   }
 }
-@keyframes rainbow {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
+
 
 /* ✅ Základní styly */
 body {
-  background: linear-gradient(90deg, rgb(219, 216, 216), rgb(196, 194, 194), rgb(157, 158, 157), rgb(197, 195, 195), rgb(196, 194, 194), rgb(219, 216, 216));
-  background-size: 1000% 1000%;
-  animation: rainbow 10s linear infinite;
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-secondary), Arial, Helvetica, sans-serif;
 }
@@ -55,6 +50,13 @@ body {
   font-weight: 500;
   font-size: 5rem;
  
+}
+.spinImg{
+  position:absolute;
+  margin-left: -550px;
+  z-index: -1000;
+  margin-top: -170px;
+  
 }
 
 /* ✅ Nadpis */
@@ -235,13 +237,28 @@ h2 {
 }
 
 /* Styly pro responzivní chování */
-@media (max-width: 768px) {
+@media (max-width: 1160px){
+  .spinImg{
+    position: absolute;
+    display: flex;
+    z-index: -1000;
+    margin-top: -165px;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 918px) {
   .sidebar {
     width: 100%;
     height: auto;
     position: relative;
   }
-  
+  .spinImg{
+    position: absolute;
+    display: flex;
+    z-index: -1000;
+    margin-top: -100px;
+    margin-left: 0px;
+  }
   .ref-box {
 
     
@@ -250,7 +267,7 @@ h2 {
   .artRef {
     width: 95%;
     margin-bottom: 1rem;
-    min-width: 100%; /* Jeden sloupec pro malé obrazovky */
+    min-width: 80%; /* Jeden sloupec pro malé obrazovky */
   }
   
   .bid-box {

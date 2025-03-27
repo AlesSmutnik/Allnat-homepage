@@ -1,15 +1,16 @@
 'use client';
 
 import { useEffect } from "react";
-// import Navbar from "./commponents/Navbar";
 import ThemeToggle from "./commponents/ThemeToggle";
 import RotatingReviews from "./commponents/RotatingRewiews";
 import BidAndPrice from "./commponents/BidAndPrice";
 import Button from "./commponents/Button";
-import Onas from "./commponents/Onas"
-import Blog from "./commponents/Blog"
+import Onas from "./commponents/Onas";
 import Contact from "./commponents/Contact";
+import ScrollReveal from "scrollreveal";
 // import Footer from "./commponents/Footer";
+// import Navbar from "./commponents/Navbar";
+// import Blog from "./commponents/Blog"
 
 export default function Home() {
   useEffect(() => {
@@ -17,7 +18,19 @@ export default function Home() {
     if (mainContent) {
       mainContent.classList.add('ml-64');
     }
+   // ScrollReveal animace
+   import("scrollreveal").then((module) => {
+    const ScrollReveal = module.default; // Správné volání
+    ScrollReveal().reveal(".animate", {
+      delay: 500,
+      distance: "80px",
+      origin: "bottom",
+      duration: 1000,
+    });
+  });
   }, []);
+  
+ 
 
 //scroll section pro button 
 const scrollToContact = () => { 
@@ -44,6 +57,9 @@ if (contactSection) {
           <div className="logo">
             <p>Allnat web Design</p>    
           </div>
+          <div>
+          <img src="/img/spin.png" alt="fotoMaker" width={300} height={260} className="spinImg" />
+          </div>
           <h2>Moderní weby, které prodávají</h2>
         </header>
         <article className="bid-box">
@@ -64,23 +80,23 @@ if (contactSection) {
 
         <main>
                 {/* 🔥 sekce o mě */}
-          <section id="about" style={{}}>             
+          <section id="about" style={{}} className="animate">             
                <Onas />
           </section>
                 {/* 🔥 sekce Služby a ceny  */}
-          <section id="services" style={{}}>
+          <section id="services" style={{}} className="animate">
                <BidAndPrice/>         
           </section>
                 {/* 🔥 sekce Recenze   */}
-          <section id="reference" style={{}}> 
+          <section id="reference" style={{}} className="animate"> 
                <h3 className="text-center mt-8 mb-4">Co o nás říkají klienti</h3>
               <RotatingReviews />
           </section>
                 {/* 🔥 sekce BLOG  */}
-              <Blog />                     
+              {/* <Blog />                      */}
                        
                 {/* 🔥 sekce Kontakty  */}          
-          <section id="contact" style={{}}>
+          <section id="contact" style={{}} className="animate">
               <Contact />            
           </section>
         </main>

@@ -17,41 +17,40 @@
 
 .onasBox{
     margin-top: 80px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-z-index: 1010;
+
 
 }
 .Onas{
+text-align: center;
 font-family: var(--font-secondary);
 font-size: 2.5rem;
 font-style: oblique;
 font-weight: 500;
+margin-bottom: 80px;
 
 }
-.myFoto{
-    position: absolute;
-    margin-right: 580px;
-    margin-bottom: 250px;
-    border-radius: 15px;
-   
-    
-}
-.oNasP{
+.OnasIN{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+.myFoto{
+ border-radius: 15px;      
+ width: 250px;
+ height: 300px;
+ margin-right: 220px;
+ margin-top: -90px;   
+}
+.oNasP{
     background: linear-gradient(to top, #14add3, #586364);
     border-radius: 10px;
     box-shadow: inset 0 2px 4px rgba(116, 115, 114, 0.5),
                 inset 0 -2px 4px rgba(0, 0, 0, 0.2),
                 0 6px 12px rgba(0, 0, 0, 0.815);
     text-align: center;
-    width: 400px;
-    height: 400px;
+    width: 700px;
+    height: auto;
     margin: auto; /* Zarovná box na střed */
     padding: 20px;
     border-top-right-radius: 25px;
@@ -61,10 +60,36 @@ font-weight: 500;
   font-family: var(--font-secondary);
   font-weight: 500;
   font-size: 1.4rem;
-  margin-bottom: 15px;
+  margin-bottom: 120px;
+  margin-left: 120px;
 }
 .oNasP:hover{
     transform: translateY(
         -5px
     );
+}
+
+
+@media (max-width: 1400px) {
+    .onasBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Onas{
+        margin-bottom: 10px;
+    }
+    .OnasIN{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .oNasP{
+        max-width: 350px;
+        height: auto;
+        margin: 0px;
+    }
+    .myFoto{
+        display: none;
+    }
 }
