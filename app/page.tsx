@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import { useEffect } from "react";
 import ThemeToggle from "./commponents/ThemeToggle";
 import RotatingReviews from "./commponents/RotatingRewiews";
@@ -7,10 +7,7 @@ import BidAndPrice from "./commponents/BidAndPrice";
 import Button from "./commponents/Button";
 import Onas from "./commponents/Onas";
 import Contact from "./commponents/Contact";
-import ScrollReveal from "scrollreveal";
-// import Footer from "./commponents/Footer";
-// import Navbar from "./commponents/Navbar";
-// import Blog from "./commponents/Blog"
+
 
 export default function Home() {
   useEffect(() => {
@@ -58,7 +55,7 @@ if (contactSection) {
             <p>Allnat web Design</p>    
           </div>
           <div>
-          <img src="/img/spin.png" alt="fotoMaker" width={300} height={260} className="spinImg" />
+          <Image src="/img/spin.png" alt="fotoMaker" width={300} height={260} className="spinImg" />
           </div>
           <h2>Moderní weby, které prodávají</h2>
         </header>

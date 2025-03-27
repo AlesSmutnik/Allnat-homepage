@@ -76,7 +76,7 @@ const RotatingReviews: React.FC = () => {
   // Effect pro aktualizaci viditelných recenzí při změně startIndex nebo displayCount
   useEffect(() => {
     updateVisibleReviews();
-  }, [startIndex, displayCount]);
+  }, [startIndex, displayCount,]);
 
   // Effect pro automatickou rotaci recenzí
   useEffect(() => {

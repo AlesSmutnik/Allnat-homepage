@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 // import ScrollReveal from 'scrollreveal';
 import style from "./Contact.module.scss";
 
@@ -10,7 +10,7 @@ const ContactForm = () => {
   const [message, setMessage] = useState('');
   const [response, setResponse] = useState('');
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const formData = { name, email, message };
