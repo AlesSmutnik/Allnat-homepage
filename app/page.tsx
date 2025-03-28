@@ -1,6 +1,8 @@
 'use client';
+
 import Image from 'next/image';
 import { useEffect } from "react";
+
 import ThemeToggle from "./commponents/ThemeToggle";
 import RotatingReviews from "./commponents/RotatingRewiews";
 import BidAndPrice from "./commponents/BidAndPrice";
