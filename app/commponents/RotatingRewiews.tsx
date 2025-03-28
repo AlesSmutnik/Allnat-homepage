@@ -1,7 +1,8 @@
 'use client';
-
+import { useCallback } from 'react';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useMemo } from 'react';
 
 // Interface pro jednu recenzi
 interface Review {
@@ -13,38 +14,13 @@ interface Review {
 
 const RotatingReviews: React.FC = () => {
   // Všechny recenze z vašeho původního kódu
-  const allReviews: Review[] = [
-    {
-      id: 1,
-      name: "Petra S.",
-      image: "/img/ref1.jpeg",
-      text: "\"Nečekala jsem, že to půjde tak rychle! Web hotový v rekordním čase a přesně podle domluvy.\""
-    },
-    {
-      id: 2,
-      name: "Martin D.",
-      image: "/img/ref2.jpeg",
-      text: "\"Allnat nám vytvořil stránku, která konečně působí profesionálně. Komunikace? Naprosto bez problémů!\""
-    },
-    {
-      id: 3,
-      name: "Jaroslava M.",
-      image: "/img/ref3.jpeg",
-      text: "\"Super přístup! Všechno jsme probrali, dostala jsem skvělé rady a web funguje perfektně.\""
-    },
-    {
-      id: 4,
-      name: "Jan K.",
-      image: "/img/ref4.jpeg",
-      text: "\"Skvělá spolupráce! Web vypadá moderně, běží bleskově a přesně odpovídá našim potřebám.\""
-    },
-    {
-      id: 5,
-      name: "Tomáš R.",
-      image: "/img/ref5.jpeg",
-      text: "\"Rychlost, kvalita a osobní přístup, přesně to, co jsem hledal. Doporučuju!\""
-    }
-  ];
+  const allReviews = useMemo(() => [
+    { id: 1, name: "Petra S.", image: "/img/ref1.jpeg", text: "\"Nečekala jsem, že to půjde tak rychle! ...\"" },
+    { id: 2, name: "Martin D.", image: "/img/ref2.jpeg", text: "\"Allnat nám vytvořil stránku, která konečně působí profesionálně. ...\"" },
+    { id: 3, name: "Jaroslava M.", image: "/img/ref3.jpeg", text: "\"Super přístup! ...\"" },
+    { id: 4, name: "Jan K.", image: "/img/ref4.jpeg", text: "\"Skvělá spolupráce! ...\"" },
+    { id: 5, name: "Tomáš R.", image: "/img/ref5.jpeg", text: "\"Rychlost, kvalita a osobní přístup ...\"" }
+  ], []);
 
   // Stav pro aktuálně zobrazené recenze
   const [visibleReviews, setVisibleReviews] = useState<Review[]>([]);
@@ -58,8 +34,9 @@ const RotatingReviews: React.FC = () => {
   // Effect pro nastavení počtu zobrazených recenzí podle šířky okna
   useEffect(() => {
     const handleResize = () => {
-      setDisplayCount(window.innerWidth < 700 ? 1 : 1);
+      setDisplayCount(window.innerWidth < 700 ? 1 : 3);
     };
+    
     
     // Nastavení počátečního počtu recenzí
     handleResize();
@@ -74,39 +51,47 @@ const RotatingReviews: React.FC = () => {
   }, []);
 
   // Effect pro aktualizaci viditelných recenzí při změně startIndex nebo displayCount
-  useEffect(() => {
-    updateVisibleReviews();
-  }, [startIndex, displayCount,]);
+ 
+
+    // Funkce pro posun na další recenzi
+    const rotateNext = useCallback(() => {
+      setStartIndex((prevIndex) => (prevIndex + 1) % allReviews.length);
+    }, [allReviews.length]);
 
   // Effect pro automatickou rotaci recenzí
   useEffect(() => {
     let interval: NodeJS.Timeout | null = null;
-
+  
     if (autoRotate) {
       interval = setInterval(() => {
         rotateNext();
       }, 10000);
     }
-
+  
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [autoRotate, startIndex, allReviews.length, displayCount]);
+  }, [autoRotate, rotateNext]);
+  
 
   // Funkce pro aktualizaci viditelných recenzí
-  const updateVisibleReviews = () => {
-    const reviews = [];
-    for (let i = 0; i < displayCount; i++) {
-      const index = (startIndex + i) % allReviews.length;
-      reviews.push(allReviews[index]);
-    }
-    setVisibleReviews(reviews);
-  };
+  const updateVisibleReviews = useCallback(() => {
+  const reviews = [];
+  for (let i = 0; i < displayCount; i++) {
+    const index = (startIndex + i) % allReviews.length;
+    reviews.push(allReviews[index]);
+  }
+  setVisibleReviews(reviews);
+}, [displayCount, startIndex, allReviews]);
 
-  // Funkce pro posun na další recenzi
-  const rotateNext = () => {
-    setStartIndex((prevIndex) => (prevIndex + 1) % allReviews.length);
-  };
+useEffect(() => {
+  updateVisibleReviews();
+}, [startIndex, displayCount, updateVisibleReviews]);
+
+  
+
+
+  
 
   // Funkce pro posun na předchozí recenzi
   const rotatePrev = () => {

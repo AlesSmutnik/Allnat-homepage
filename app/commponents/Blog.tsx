@@ -1,4 +1,4 @@
-import style from "./Blog.module.scss"
+// import style from "./Blog.module.scss"
 
 
 
