@@ -58,7 +58,7 @@ const BidAndPrice: React.FC = () => {
   return (
     <div className={styles.serviceBox}>
       <p className={styles.nadpis}>Balíčky služeb</p>
-      <p className={styles.popis}>Vyber si balíček, který nejlépe odpovídá tvým potřebám.</p>
+      <p className={styles.popis}>Vyber si Přesně ten, který nejlépe odpovídá tvým potřebám.</p>
 
       <div className={styles.gridContainer}>
       {packages.map((pkg) => (

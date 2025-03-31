@@ -21,7 +21,7 @@ export default function Onas () {
         
         👋 Pokud hledáš někoho, kdo ti vytvoří web, který bude nejen hezký, ale i funkční, rád pomůžu!            
          </p>
-         <Image src="/img/myFoto.jpg" alt="fotoMaker" width={170} height={200} className={styles.myFoto} />
+         <img src="/img/myFoto.jpg" alt="fotoMaker" width={170} height={200} className={styles.myFoto} />
         </div>
         
       </div>

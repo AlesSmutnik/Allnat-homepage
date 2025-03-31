@@ -12,7 +12,13 @@ $button-height: 75px;
 }
 
 // ✨ Styl tlačítka
-.button {
+.btnBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button {  
+  justify-content: center;
   background: linear-gradient(90deg, $gradient-start, $gradient-middle, $gradient-start);
   background-size: 400% 400%;
   animation: rainbow 3s linear infinite;

@@ -40,7 +40,8 @@ margin-bottom: 80px;
  width: 250px;
  height: 300px;
  margin-right: 220px;
- margin-top: -90px;   
+ margin-left: 25px;
+ margin-top: -110px;   
 }
 .oNasP{
     background: linear-gradient(to top, #14add3, #586364);
@@ -49,7 +50,7 @@ margin-bottom: 80px;
                 inset 0 -2px 4px rgba(0, 0, 0, 0.2),
                 0 6px 12px rgba(0, 0, 0, 0.815);
     text-align: center;
-    width: 700px;
+    width: 500px;
     height: auto;
     margin: auto; /* Zarovná box na střed */
     padding: 20px;
@@ -70,7 +71,7 @@ margin-bottom: 80px;
 }
 
 
-@media (max-width: 1400px) {
+@media (max-width: 1100px) {
     .onasBox{
         display: flex;
         flex-direction: column;
@@ -85,7 +86,8 @@ margin-bottom: 80px;
         justify-content: center;
     }
     .oNasP{
-        max-width: 350px;
+        min-width: 200px;
+        max-width: 400px;
         height: auto;
         margin: 0px;
     }
