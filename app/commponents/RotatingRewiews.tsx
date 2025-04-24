@@ -3,12 +3,12 @@ import { useCallback, useMemo, useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from "../styles/RotatingRewiews.module.scss";
 
-interface Review {
-  id: number;
-  name: string;
-  image: string;
-  text: string;
-}
+// interface Review {
+//   id: number;
+//   name: string;
+//   image: string;
+//   text: string;
+// }
 
 const RotatingReviews: React.FC = () => {
   const allReviews = useMemo(() => [
