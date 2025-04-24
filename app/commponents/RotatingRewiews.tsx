@@ -1,7 +1,7 @@
 'use client';
 import { useCallback, useMemo, useState, useEffect } from 'react';
 import Image from 'next/image';
-import styles from "./RotatingRewiews.module.scss";
+import styles from "../styles/RotatingRewiews.module.scss";
 
 interface Review {
   id: number;
@@ -52,7 +52,11 @@ const RotatingReviews: React.FC = () => {
 
   return (
     <div className={styles.reviewsContainer}>
+      <div>
+      <h3 className={styles.textUnderRew}>Co o nás říkají klienti</h3>
+        </div>       
       <div className={styles.reviewsNavigation}>
+      
         <button onClick={rotatePrev} className={styles.reviewNavButton} aria-label="Předchozí recenze">
           &#10094;
         </button>

@@ -1,14 +1,13 @@
 'use client';
-
-import Image from 'next/image';
 import { useEffect } from "react";
-
-import ThemeToggle from "./commponents/ThemeToggle";
 import RotatingReviews from "./commponents/RotatingRewiews";
 import BidAndPrice from "./commponents/BidAndPrice";
 import Button from "./commponents/Button";
 import Onas from "./commponents/Onas";
 import Contact from "./commponents/Contact";
+import JakToProbiha from "./commponents/jaktoprobiha";
+import "./globals.css"; // Import globálních stylů
+import OursWork from "./commponents/OursWork";
 
 
 export default function Home() {
@@ -44,9 +43,9 @@ if (contactSection) {
 
 {/* 🔥  Dark mode*/}
 
-                 <div id="main-content" className="flex-1 transition-all duration-300">
-        <div className="flex justify-end p-4">
-        <ThemeToggle />
+                 <div id="main-content" className="flex-1 transition-all duration-300 ">
+        <div className="flex justify-end p-4 ">
+        {/* <ThemeToggle /> */}
         </div>
 
  {/* 🔥 Hlavní obsah */}
@@ -56,10 +55,7 @@ if (contactSection) {
           <div className="logo">
             <p>Allnat web Design</p>    
           </div>
-          <div>
-          <Image src="/img/spin.png" alt="fotoMaker" width={300} height={260} className="spinImg" />
-          </div>
-          <h2>Moderní weby, které prodávají</h2>
+           <h2>Moderní weby, které prodávají</h2>
         </header>
         <article className="bid-box">
             <p className="bid-p">
@@ -82,13 +78,20 @@ if (contactSection) {
           <section id="about" style={{}} className="animate">             
                <Onas />
           </section>
+          {/* 🔥 sekce jak to probiha   */}
+          <section id="jak-to-probiha" style={{}} className="animate">
+               <JakToProbiha />
+          </section>        
                 {/* 🔥 sekce Služby a ceny  */}
           <section id="services" style={{}} className="animate">
                <BidAndPrice/>         
           </section>
+           {/* 🔥 sekce naše práce  */}
+           <section>
+            <OursWork />
+           </section>
                 {/* 🔥 sekce Recenze   */}
-          <section id="reference" style={{}} className="animate"> 
-               <h3 className="text-center mt-8 mb-4">Co o nás říkají klienti</h3>
+          <section id="reference" style={{}} className="animate">              
               <RotatingReviews />
           </section>
                 {/* 🔥 sekce BLOG  */}

@@ -39,7 +39,7 @@ const ThemeToggle: React.FC = () => {
       onClick={toggleDarkMode}
       className="buttonTH theme-toggle"
     >
-      {isDarkMode ? '☀️ Světlý režim' : '🌙 Tmavý režim'}
+      {isDarkMode ? '☀️' : '🌙 '}
     </button>
   );
 };

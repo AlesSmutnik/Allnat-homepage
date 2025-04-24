@@ -1,43 +1,42 @@
               // All contact form 
              
 .ContactArea{
+    background-color: #2e2c2c9f;
+    box-shadow: inset 0 2px 4px rgba(116, 115, 114, 0.5),
+              inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+              0 6px 12px rgba(0, 0, 0, 0.726);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 120px;
 }    
               //  contact description 
-.AllheadContact{
 
-}
 .ContactMY{
     font-family: var(--font-secondary);
     font-size: 2.5rem;
     font-style: oblique;
     font-weight: 500;
     text-align: center;
-}
-.ContactWhen{
-    font-family: var(--font-secondary);
-    font-size: 2rem;
-    font-style: oblique;
-    font-weight: 500;
-    text-align: center;
+    color: var(--darkfont);
 }
 .ContactNumber{
     font-family: var(--font-secondary);
     font-size: 2rem;
     font-style: oblique;
     font-weight: 500;
+    color: var(--darkfont);
     
     
 } 
              // form  
-.ContactForm{
-
+.ContactForm{    
+    width: 300px;
+   
 }
 .ContactYorName{
-    margin-bottom: -1px;
+    margin-bottom: -5px;
+    color: var(--darkfont);
 }
 .ContactYorNameAll{
     font-family: var(--font-secondary);
@@ -49,16 +48,17 @@
 }
 
 .ContactYorNameMessAemail{    
+    border: 2px solid #c2e1e4;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(to top, #afc6cc, #c2e1e4);
-    border-radius: 4px;
+    border-radius: 10px;
     box-shadow: inset 0 2px 1px rgba(219, 217, 215, 0.5),
                 inset 0 -2px 1px rgba(226, 226, 226, 0.2),
                 0 6px 12px rgba(0, 0, 0, 0.726);    
-    width: 200px;
+    width: 280px;
     height: 20px;
     margin: auto; /* Zarovná box na střed */
     padding: 5px;
@@ -71,6 +71,7 @@
     
 }
 .ContactEmail{
+    color: var(--darkfont);
     font-family: var(--font-secondary);
     font-size: 1.4rem;
     font-style: oblique;
@@ -85,7 +86,8 @@
  flex-direction: column;
  align-items: center; 
 }
-.ContactmessageDes{    
+.ContactmessageDes{   
+    color: var(--darkfont); 
     font-family: var(--font-secondary);
     font-size: 1.4rem;
     font-style: oblique;
@@ -93,6 +95,7 @@
     margin-bottom: -1px;   
 }
 .Contactmessage{
+    border: 2px solid #c2e1e4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,8 +104,8 @@
     border-radius: 10px;
     box-shadow: inset 0 2px 4px rgba(116, 115, 114, 0.5),
                 inset 0 -2px 4px rgba(0, 0, 0, 0.2),
-                0 6px 12px rgba(0, 0, 0, 0.726);    
-    width: 200px;
+                0 6px 12px rgba(0, 0, 0, 0.425);    
+    width: 250px;
     height: 100px;
     margin: auto; /* Zarovná box na střed */
     padding: 20px;

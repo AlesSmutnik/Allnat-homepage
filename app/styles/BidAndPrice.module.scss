@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tangerine:wght@400;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tinos&family=Zen+Dots&display=swap');
 
 
 /* ✅ Globální proměnné */
@@ -15,13 +13,14 @@
 //   --font-logo: "Zen Dots", sans-serif;
 // }
 .serviceBox{
-   margin-top: 80px;
-   margin-bottom: 200px;
+   margin-top: 120px;
+   margin-bottom: 100px;
    display: flex;
    flex-direction: column;
    align-items: center;
 }
 .nadpis{
+  color: var(--darkfont);
   font-family: var(--font-secondary);
   font-size: 2.5rem;
   font-style: oblique;
@@ -29,6 +28,7 @@
 }
 
 .popis{
+  color: var(--darkfont);
   font-size: 1.5rem;
   font-family: var(--font-secondary);
   font-style: italic;
@@ -83,7 +83,7 @@
 
 .description {
   text-align: center;
-  color: #222222;
+  color: var(--darkfont);
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
@@ -95,7 +95,7 @@
   line-height: 25px;
   font-size: 1.05rem;
   padding-left: 1rem;
-  color: #222121;
+  color: var(--darkfont);
   margin-bottom: 1rem;
 }
 
@@ -105,6 +105,7 @@
   font-weight: bold;
   border-bottom: 2px solid black;
   margin-top: 40px;
+  color: var(--darkfont);
 }
 
 

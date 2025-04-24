@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 // import ScrollReveal from 'scrollreveal';
-import style from "./Contact.module.scss";
+import style from "../styles/Contact.module.scss";
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -49,7 +49,6 @@ const ContactForm = () => {
     <section className={style.ContactArea}>     
           <div className={style.AllheadContact}> 
               <h1 className={style.ContactMY}>Kontaktujte nás</h1>
-              <p className={style.ContactWhen}>Po-So 7-20 hod.</p>
               <p className={style.ContactNumber}>Tel: +420 774 579 768</p>
              
           </div>
@@ -95,13 +94,6 @@ const ContactForm = () => {
          </button>
 
           </div>  
-         
-         
-         
-
-
-
-
       </form>
       
       {response && <p>{response}</p>}

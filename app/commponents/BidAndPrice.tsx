@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./BidAndPrice.module.scss"; // Import SCSS modulu
+import styles from "../styles/BidAndPrice.module.scss"; // Import SCSS modulu
 
 const packages = [
   {
