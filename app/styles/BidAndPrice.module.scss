@@ -13,6 +13,7 @@
 //   --font-logo: "Zen Dots", sans-serif;
 // }
 .serviceBox{
+   width: 100%;
    margin-top: 120px;
    margin-bottom: 100px;
    display: flex;
@@ -34,6 +35,8 @@
   font-style: italic;
   font-weight: 400;
   flex-wrap: wrap;
+  width: 80%;
+  text-align: center;
 }
 
 .gridContainer {  
@@ -227,3 +230,6 @@
       }
       
 };
+@media (max-width: 450px){
+  
+  }

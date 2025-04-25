@@ -26,6 +26,10 @@
 
 /* ✅ Základní styly */
 body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
   background: url("/myback.png");
   background-size: cover;
   background-attachment: fixed;
@@ -111,28 +115,20 @@ h2 {
 
 /* ✅ Responzivní styly */
 @media (max-width: 1160px) {
-  .spinImg {
-    position: absolute;
-    display: flex;
-    z-index: -1000;
-    margin-top: -165px;
-    margin-left: 0px;
-  }
+  
 }
-
 @media (max-width: 918px) {
+  .logo-box {
+    text-align: center;
+    width: 95%;
+    margin: 0px auto;
+  }
   .sidebar {
     width: 100%;
     height: auto;
     position: relative;
   }
-  .spinImg {
-    position: absolute;
-    display: flex;
-    z-index: -1000;
-    margin-top: -100px;
-    margin-left: 0px;
-  }
+ 
   .ref-box {
     max-width: 200px;
   }
@@ -142,8 +138,10 @@ h2 {
     min-width: 80%; /* Jeden sloupec pro malé obrazovky */
   }
   .bid-box {
-    width: 90%;
-    max-width: 400px;
+    width: 95vw;
+    margin: 80px auto;
+    padding: 0px;
+    
   }
   .button {
     width: 80%;
@@ -152,6 +150,7 @@ h2 {
   .logo {
     font-size: 50px;
   }
+  
 }
 
 @media (max-width: 700px) {
@@ -169,8 +168,23 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right:-16px;
+    
      }
+     .logo-box{
+      padding: 0px;
+      width: 99vw;
+      height: auto;
+      margin: 0px auto;
+    }
+    
+    .bid-p {
+      color: var(--secondary-color);
+      font-family: var(--font-secondary);
+      font-weight: 500;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      max-width: 80%;
+    }
   .ref-box {
     max-width: 200px;
   }
@@ -178,22 +192,29 @@ h2 {
     min-width: 100%; /* Jeden sloupec pro velmi malé obrazovky */
   }
   .logo {
+    margin: 50px auto;
+    padding: 5px 0px 0px 0px;
     font-size: 2rem; /* Zmenšení loga na menších obrazovkách */
   }
-  .bid-box {
+  h2 {
+    font-size: 1.8rem; 
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+  }
+  .bid-box {   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 95vw;
     height: auto;
+    padding: 0%;
+    margin: 0px auto; /* Zarovná box na střed */
     
   }
-  h2 {
-    font-size: 1.8rem; /* Zmenšení nadpisu */
-  }
+ 
   .theme-toggle {
     font-size: 0.75rem; /* Zmenšení tlačítka změny motivu */
     padding: 0.4rem 0.8rem;
-  }
+      }
 }

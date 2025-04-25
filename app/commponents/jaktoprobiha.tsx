@@ -3,8 +3,8 @@ import styles from '../styles/jaktoprobiha.module.scss'; // Import SCSS module
 import Image from 'next/image'; // Import Image component from Next.js
 const JakToProbiha: React.FC = () => {
     return (
-        <div className={styles.jakTo}>
-    <h2>Jak probíhá spolupráce na vývoji webu s klientem</h2>
+        <div className={styles.jakToProbihaContainer}>
+    <h2 className={styles.jakTo}>Jak probíhá spolupráce na vývoji webu s klientem</h2>
         <section className={styles.jakToProbiha}>
             
 

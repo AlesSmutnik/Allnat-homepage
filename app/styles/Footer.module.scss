@@ -32,3 +32,21 @@
     margin: 0 10px;
     transition: all 0.3s ease-in-out;
 }
+@media (max-width: 480px) {
+    .footerAll {
+        height: 150px;
+        width: 98vw;
+        margin: 0px auto;
+    }
+    .h3 {
+        font-size: 18px;
+    }
+    .socIcons {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .imagef {
+        margin: 0 5px;
+    }
+    
+}
