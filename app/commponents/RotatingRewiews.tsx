@@ -12,11 +12,11 @@ import styles from "../styles/RotatingRewiews.module.scss";
 
 const RotatingReviews: React.FC = () => {
   const allReviews = useMemo(() => [
-    { id: 1, name: "Petra S.", image: "/img/ref1.jpeg", text: "\"Nečekala jsem, že to půjde tak rychle! ...\"" },
-    { id: 2, name: "Martin D.", image: "/img/ref2.jpeg", text: "\"Allnat nám vytvořil stránku, která konečně působí profesionálně. ...\"" },
-    { id: 3, name: "Jaroslava M.", image: "/img/ref3.jpeg", text: "\"Super přístup! ...\"" },
-    { id: 4, name: "Jan K.", image: "/img/ref4.jpeg", text: "\"Skvělá spolupráce! ...\"" },
-    { id: 5, name: "Tomáš R.", image: "/img/ref5.jpeg", text: "\"Rychlost, kvalita a osobní přístup ...\"" }
+    { id: 1, name: "Petra S.", image: "/ref1.jpeg", text: "\"Nečekala jsem, že to půjde tak rychle! ...\"" },
+    { id: 2, name: "Martin D.", image: "/ref2.jpeg", text: "\"Allnat nám vytvořil stránku, která konečně působí profesionálně. ...\"" },
+    { id: 3, name: "Jaroslava M.", image: "/ref3.jpeg", text: "\"Super přístup! ...\"" },
+    { id: 4, name: "Jan K.", image: "/ref4.jpeg", text: "\"Skvělá spolupráce! ...\"" },
+    { id: 5, name: "Tomáš R.", image: "/ref5.jpeg", text: "\"Rychlost, kvalita a osobní přístup ...\"" }
   ], []);
 
   const [displayCount, setDisplayCount] = useState(3);

@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     margin: 120px auto;
-    width: 99%;
+    width: 98%;
 }    
               //  contact description 
 
@@ -159,9 +159,16 @@ margin-top: 10px;
       transform: scale(0.6);
     }
   }
+  @media (max-width: 750px) {
+    .ContactArea{
+        width: 95%;
+        margin: 80px auto;
+       }
+  }
+
 @media (max-width: 480px) {
     .ContactArea{
-     width: 98vw;
+     width: 95%;
      margin: 80px auto;
     }
 }

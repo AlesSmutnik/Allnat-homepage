@@ -11,11 +11,11 @@ const JakToProbiha: React.FC = () => {
                        
 
            <div className={styles.pngBox}>
-           <Image src="/img/i2.png" alt="fotoMaker" width={50} height={50} className={styles.imPng} />
-           <Image src="/img/i1.png" alt="fotoMaker" width={50} height={50} className={styles.imPng} />
-           <Image src="/img/i3.png" alt="fotoMaker" width={50} height={50} className={styles.imPng} />
-           <Image src="/img/i4.png" alt="fotoMaker" width={50} height={50} className={styles.imPng} />
-           <Image src="/img/i5.png" alt="fotoMaker" width={50} height={50} className={styles.imPng} />
+           <Image src="/i2.png" alt="fotoMaker" width={50} height={50} className={styles.imPng} />
+           <Image src="/i1.png" alt="fotoMaker" width={50} height={50} className={styles.imPng} />
+           <Image src="/i3.png" alt="fotoMaker" width={50} height={50} className={styles.imPng} />
+           <Image src="/i4.png" alt="fotoMaker" width={50} height={50} className={styles.imPng} />
+           <Image src="/i5.png" alt="fotoMaker" width={50} height={50} className={styles.imPng} />
           </div>
 
           

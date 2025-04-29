@@ -26,10 +26,12 @@
 
 /* ✅ Základní styly */
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
+  margin: 0px auto;   
   background: url("/myback.png");
   background-size: cover;
   background-attachment: fixed;
@@ -43,14 +45,17 @@ body {
 .toggle {
   width: 60px;
   position: absolute;
-  border: 2px solid red;
+ 
 }
 
 /* ✅ Logo */
 .logo-box {
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 80px;
+  border-radius: 15px;
+  width: 100%;
+  text-align: center;  
+  margin: 0px auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
   background-color: #2e2c2c9f;
   box-shadow: inset 0 2px 4px rgba(116, 115, 114, 0.5),
     inset 0 -2px 4px rgba(0, 0, 0, 0.2),
@@ -120,7 +125,7 @@ h2 {
 @media (max-width: 918px) {
   .logo-box {
     text-align: center;
-    width: 95%;
+    width: 95vw;
     margin: 0px auto;
   }
   .sidebar {
@@ -157,19 +162,16 @@ h2 {
   .artRef {
     min-width: calc(50% - 1rem); /* Dva sloupce pod 700px */
   }
+  
 }
 
 @media (max-width: 480px) {
   body {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-     }
+    background-image: url("/backMob.jpg");
+    background-size: 100vw;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
      .logo-box{
       padding: 0px;
       width: 99vw;

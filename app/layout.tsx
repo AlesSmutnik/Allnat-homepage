@@ -1,3 +1,5 @@
+// SLOŽKA: app/layout.tsx
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Tangerine, Tinos, Zen_Dots } from "next/font/google";
@@ -34,10 +36,14 @@ const zenDots = Zen_Dots({
   variable: "--font-logo",
 });
 
+// SPRÁVNÁ metadata
 export const metadata: Metadata = {
   title: "Allnat Web | Moderní a rychlé webové stránky na míru",
   description: "Tvoříme moderní, rychlé a responzivní webové stránky na míru pro vaše podnikání.",
   keywords: "webové stránky, moderní web, responzivní design, vývoj webu, web na míru",
+  icons: {
+    icon: "/favicon.ico", // favicon
+  },
   openGraph: {
     title: "Allnat Web | Moderní a rychlé webové stránky na míru",
     description: "Tvoříme moderní, rychlé a responzivní webové stránky na míru pro vaše podnikání.",
@@ -72,23 +78,6 @@ export default function RootLayout({
       lang="cs"
       className={`${geistSans.variable} ${geistMono.variable} ${tangerine.variable} ${tinos.variable} ${zenDots.variable}`}
     >
-      <head>
-        {/* Meta tags for SEO */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="keywords" content="webové stránky, moderní web, responzivní design, vývoj webu, web na míru" />
-        <meta name="author" content="Allnat Web" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Allnat Web | Moderní a rychlé webové stránky na míru" />
-        <meta property="og:description" content="Tvoříme moderní, rychlé a responzivní webové stránky na míru pro vaše podnikání." />
-        <meta property="og:image" content="https://www.allnatweb.cz/og-image.jpg" />
-        <meta property="og:url" content="https://www.allnatweb.cz" />
-        <meta property="og:site_name" content="Allnat Web" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Allnat Web | Moderní a rychlé webové stránky na míru" />
-        <meta name="twitter:description" content="Tvoříme moderní, rychlé a responzivní webové stránky na míru pro vaše podnikání." />
-        <meta name="twitter:image" content="https://www.allnatweb.cz/og-image.jpg" />
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body className="antialiased">
         <Navbar />
         {children}

@@ -11,11 +11,11 @@ export default function OursWork() {
         <section>              
               
                 <div className={styles.frame}>
-                    <h3 className={styles.title}>Název projektu 1</h3>
+                    <h3 className={styles.title}>Web pro montáže nábytku</h3>
                     <Link href="https://www.woodooalda.cz/" target="_blank" rel="noopener noreferrer">
-                    <Image src="/logo1.png" alt="Image 1" width={200} height={200} className={styles.image} />
+                    <Image src="/logo1.png"alt="Image 1" width={100} height={100} className={styles.image} />
                     </Link>
-                    <p className={styles.text}>Web pro montáže nábytku</p>
+                    <p className={styles.text}> ukázka webu zákazníka </p>
                 </div>
                 {/* <div className={styles.frame}>
                     <Image src="/images/2.png" alt="Image 2" width={300} height={200} className={styles.image} />

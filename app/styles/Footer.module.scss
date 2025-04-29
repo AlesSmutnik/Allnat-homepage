@@ -1,6 +1,6 @@
 .footerAll{
-    margin-top: 120px;
-    width: 100%;
+    margin: 120px auto 0px auto;
+    width: 98%;
     height: 180px;
     display: flex;
     flex-direction: column;
@@ -34,8 +34,9 @@
 }
 @media (max-width: 480px) {
     .footerAll {
+         
         height: 150px;
-        width: 98vw;
+        width: 95%;
         margin: 0px auto;
     }
     .h3 {
